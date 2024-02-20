@@ -7,14 +7,11 @@ class Asiento:
     def cambiarColor(self, nuevoColor):
         coloresAsignados = ["Rojo", "Azul", "Verde", "Negro", "Blanco"]
         if nuevoColor.lower() in coloresAsignados:
-            if nuevoColor.lower() == self.color.lower():
-                print(f"El asiento ya es de color {nuevoColor}. No se realizaron cambios.")
-            else:
-                print(f"El color del asiento ha sido cambiado de {self.color} a {nuevoColor}.")
-                self.color = nuevoColor
+            self.color = nuevoColor
+            print("Color del asiento cambio exitosamente.")
         else:
-            print(f"El color {nuevoColor} no esta permitido para este asiento.")
-
+            print("EL color especificado no esta permitido para el asiento.")
+            
 class Auto:
      cantidadCreados = 0
 
